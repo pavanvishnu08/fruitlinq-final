@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:aspect-video overflow-hidden" style={{ backgroundImage: 'url(/back%20ground%20image.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:aspect-video overflow-hidden" style={{ backgroundImage: 'url(/background-image.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         {/* Dark Overlay for Text Readability */}
         <div className="absolute inset-0 bg-black/40"></div>
 
@@ -137,10 +137,10 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             {[
-              { step: "01", title: "Premium Orchards", desc: "Sourced from South Africa & Egypt", imgUrl: "/Premium Orchards.png", color: "bg-primary" },
-              { step: "02", title: "Grade-A Selection", desc: "Rigorous quality checks", imgUrl: "/Grade-A Selection.png", color: "bg-secondary" },
+              { step: "01", title: "Premium Orchards", desc: "Sourced from South Africa & Egypt", imgUrl: "/premium-orchards.png", color: "bg-primary" },
+              { step: "02", title: "Grade-A Selection", desc: "Rigorous quality checks", imgUrl: "/grade-a-selection.png", color: "bg-secondary" },
               { step: "03", title: "Cold-Chain Logistics", desc: "Temperature controlled transport", imgUrl: "/Cold-Chain Logistics.png", color: "bg-vibrant-teal" },
-              { step: "04", title: "Smart Juicing", desc: "Fresh juice in India instantly", imgUrl: "/Smart Juicing.png", color: "bg-vibrant-pink" },
+              { step: "04", title: "Smart Juicing", desc: "Fresh juice in India instantly", imgUrl: "/smart-juicing.png", color: "bg-vibrant-pink" },
             ].map((step, index) => (
               <motion.div
                 key={index}
@@ -183,7 +183,7 @@ const Home: React.FC = () => {
              className="relative h-[400px] sm:h-[500px] lg:h-[700px] bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 order-2 lg:order-1"
            >
                {/* Visual for Tech */}
-               <img src="/homepage machine.jpeg" alt="Smart Technology" className="w-full h-full object-cover opacity-1000" />
+               <img src="/homepage-machine.jpeg" alt="Smart Technology" className="w-full h-full object-cover opacity-1000" />
                <div className="absolute inset-0 bg-gradient-to-tr from-gray-600/90 to-primary/20"></div>
                <div className="absolute bottom-10 left-10 right-10 text-white">
                    <div className="flex items-center gap-2 mb-2">

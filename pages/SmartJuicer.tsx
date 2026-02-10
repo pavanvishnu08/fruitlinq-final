@@ -36,8 +36,8 @@ const SmartJuicer: React.FC = () => {
             
             <div className="relative max-w-[800px] mx-auto">
                {/* Visual Representation of Machine */}
-               <img 
-                  src="/smartjuicerpage machine.jpeg" 
+               <img
+                  src="/smartjuicerpage-machine.jpeg"
                   alt="5th Gen Smart Juicer"
                   className="relative mx-auto max-w-md md:max-w-lg w-full h-auto rounded-[3rem] shadow-2xl border-8 border-gray-100 z-10"
                />
