@@ -139,7 +139,7 @@ const Home: React.FC = () => {
             {[
               { step: "01", title: "Premium Orchards", desc: "Sourced from South Africa & Egypt", imgUrl: "/premium-orchards.png", color: "bg-primary" },
               { step: "02", title: "Grade-A Selection", desc: "Rigorous quality checks", imgUrl: "/grade-a-selection.png", color: "bg-secondary" },
-              { step: "03", title: "Cold-Chain Logistics", desc: "Temperature controlled transport", imgUrl: "/Cold-Chain Logistics.png", color: "bg-vibrant-teal" },
+              { step: "03", title: "Cold-Chain Logistics", desc: "Temperature controlled transport", imgUrl: "/cold-chain-logistics.png", color: "bg-vibrant-teal" },
               { step: "04", title: "Smart Juicing", desc: "Fresh juice in India instantly", imgUrl: "/smart-juicing.png", color: "bg-vibrant-pink" },
             ].map((step, index) => (
               <motion.div

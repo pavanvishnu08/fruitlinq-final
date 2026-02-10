@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
              <Link to="/" className="inline-block">
                 <img
-                  src="/logo (1).png"
+                  src="/logo-1.png"
                   alt="Fruitlinq"
                   className="h-12 w-auto object-contain"
                 />
