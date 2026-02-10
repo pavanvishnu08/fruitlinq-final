@@ -58,7 +58,7 @@ const About: React.FC = () => {
             className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl bg-black"
           >
              <video
-               src="/fruitlinq video.mp4"
+               src="/fruitlinq-video.mp4"
                className="w-full h-full object-cover"
                autoPlay
                loop

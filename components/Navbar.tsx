@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -40,7 +41,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
              <img
-               src="/logo (1).png"
+               src="/logo-1.png"
                alt="Fruitlinq"
                className="h-12 md:h-24 w-full object-contain transition-all"
              />
