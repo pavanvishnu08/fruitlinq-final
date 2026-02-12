@@ -12,8 +12,10 @@ const Contact: React.FC = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<ContactFormData>();
 
   const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-    alert("Message sent! We will get back to you soon.");
+    const message = `Name: ${data.name}\nPhone: ${data.phone}\nCity: ${data.city}\nEmail: ${data.email}\nInterest: ${data.interestType}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/919347838756?text=${encodedMessage}`;
+    window.location.href = whatsappUrl;
   };
 
   return (
