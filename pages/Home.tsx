@@ -267,7 +267,7 @@ const Home: React.FC = () => {
                       <h4 className="font-bold text-lg mb-2">24/7 Available</h4>
                       <p className="text-base text-orange-50">Fresh juice anytime, day or night.</p>
                    </div>
-                   <img src="public\Oranges.webp" alt="Oranges Supply" className="rounded-2xl shadow-md w-full h-48 object-cover" />
+                   <img src="/Oranges.webp" alt="Oranges Supply" className="rounded-2xl shadow-md w-full h-48 object-cover" />
                 </div>
              </div>
           </div>
