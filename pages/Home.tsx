@@ -136,7 +136,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="order-1 lg:order-2 relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg transform lg:rotate-2 hover:rotate-0 transition-transform duration-500"
           >
-            <img src="public\direct supply.jpg" alt="Fresh Oranges Supply" className="w-full h-full object-cover" />
+            <img src="/direct supply.jpg" alt="Fresh Oranges Supply" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             <div className="absolute bottom-6 left-6 text-white font-bold text-xl">100% Traceable Source</div>
           </motion.div>
