@@ -12,8 +12,9 @@ const Franchise: React.FC = () => {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
   const onSubmit = (data: FranchiseFormData) => {
-    console.log(data);
-    alert("Thank you! Our team will contact you shortly.");
+    const message = `Name: ${data.name}\nCity: ${data.city}\nPhone: ${data.phone}\nEmail: ${data.email}`;
+    const whatsappUrl = `https://wa.me/919347838756?text=${encodeURIComponent(message)}`;
+    window.location.href = whatsappUrl;
   };
 
   const faqs = [
