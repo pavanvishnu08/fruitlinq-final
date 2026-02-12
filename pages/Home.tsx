@@ -38,8 +38,9 @@ const Home: React.FC = () => {
               Farm to Cup in 55 Seconds
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-md">
-              Imported, premium oranges from South Africa & Egypt. Freshly squeezed in front of you.
+              Imported, premium oranges from South Africa & Egypt. <p>Freshly squeezed in front of you.</p>
             </p>
+            
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 leading-relaxed drop-shadow-md"><span className="text-green-500 font-bold">No water. No sugar. No ice.</span></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button to="/franchise" variant="primary" className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base shadow-lg hover:shadow-xl transition-shadow">

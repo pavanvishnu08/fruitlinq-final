@@ -64,7 +64,6 @@ const About: React.FC = () => {
                loop
                muted
                playsInline
-               controls
                preload="metadata"
              />
           </motion.div>
