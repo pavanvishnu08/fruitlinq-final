@@ -35,13 +35,31 @@ const Home: React.FC = () => {
               India's First Farm-Controlled Franchise
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
-              Farm to Cup in 55 Seconds
+              Farm to Cup in <p>55 Seconds</p>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-md">
               Imported, premium oranges from South Africa & Egypt. <p>Freshly squeezed in front of you.</p>
             </p>
-            
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 leading-relaxed drop-shadow-md"><span className="text-green-500 font-bold">No water. No sugar. No ice.</span></p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              {[
+                { text: "No water" },
+                { text: "No sugar" },
+                { text: "No ice" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                >
+                  <p className="text-xl sm:text-2xl font-bold text-center text-green-400 drop-shadow-lg">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button to="/franchise" variant="primary" className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base shadow-lg hover:shadow-xl transition-shadow">
                 Explore Franchise
@@ -118,7 +136,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="order-1 lg:order-2 relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg transform lg:rotate-2 hover:rotate-0 transition-transform duration-500"
           >
-            <img src="https://media.istockphoto.com/id/976838412/photo/farmer-holding-wooden-box-with-fresh-oranges-in-orchard.jpg?s=612x612&w=0&k=20&c=Dqh6knJcQt0dBntygC3z5HbPmcbp6kuuuyeQvBXWKe4=" alt="Fresh Oranges Supply" className="w-full h-full object-cover" />
+            <img src="public\direct supply.jpg" alt="Fresh Oranges Supply" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             <div className="absolute bottom-6 left-6 text-white font-bold text-xl">100% Traceable Source</div>
           </motion.div>
@@ -249,7 +267,7 @@ const Home: React.FC = () => {
                       <h4 className="font-bold text-lg mb-2">24/7 Available</h4>
                       <p className="text-base text-orange-50">Fresh juice anytime, day or night.</p>
                    </div>
-                   <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Oranges" className="rounded-2xl shadow-md w-full h-48 object-cover" />
+                   <img src="public\Oranges.webp" alt="Oranges Supply" className="rounded-2xl shadow-md w-full h-48 object-cover" />
                 </div>
              </div>
           </div>

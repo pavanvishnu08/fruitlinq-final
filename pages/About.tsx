@@ -46,7 +46,7 @@ const About: React.FC = () => {
                 By owning export operations and partnering directly with orchards in South Africa and Egypt, we ensure that every orange squeezed in our machines meets the highest global standards of sweetness and juice content.
               </p>
               <p className="font-bold text-primary text-2xl md:text-3xl leading-snug pt-2">
-                No wholesale dependency. No compromise on quality. Just pure, export-grade fruit year-round.
+                No wholesale dependency. <p>No compromise on quality.</p> <p> Just pure, export-grade fruit year-round. </p>
               </p>
             </div>
           </motion.div>
