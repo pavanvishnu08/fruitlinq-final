@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { Check, TrendingUp, Settings, Users, DollarSign, Box, Plus, Minus, Timer } from 'lucide-react';
+import { Check, TrendingUp, Settings, Users, DollarSign, Box, Timer } from 'lucide-react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import Button from '../components/Button';
@@ -9,21 +9,11 @@ import { FranchiseFormData } from '../types';
 
 const Franchise: React.FC = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<FranchiseFormData>();
-  const [openFaq, setOpenFaq] = React.useState<number | null>(null);
-
   const onSubmit = (data: FranchiseFormData) => {
     const message = `Name: ${data.name}\nCity: ${data.city}\nPhone: ${data.phone}\nEmail: ${data.email}`;
     const whatsappUrl = `https://wa.me/919347838756?text=${encodeURIComponent(message)}`;
     window.location.href = whatsappUrl;
   };
-
-  const faqs = [
-    { q: "How much space is required for installation?", a: "The machine is compact and requires approximately 15-20 sq. ft. of space, making it ideal for lobbies, cafeterias, and corridors. Power requirements are a standard 15A socket." },
-    { q: "Do I need dedicated staff to run the machine?", a: "No. The machine is fully automated. You only need a runner for 20-30 minutes daily to refill oranges, replenish cups, and clear the waste bin." },
-    { q: "What is the shelf life of the oranges?", a: "Our cold-chain logistics ensure oranges stay fresh from farm to your location. Inside the machine, the temperature is controlled (5-8°C) to maintain freshness for several days." },
-    { q: "How do I track my sales?", a: "You get a dedicated mobile app dashboard showing real-time sales, stock levels, machine health status, and revenue analytics." },
-    { q: "What is the warranty on the machine?", a: "We provide a comprehensive 1-year warranty on the machine, covering all parts and service. Extended annual maintenance contracts (AMC) are available." },
-  ];
 
   return (
     <Layout>
@@ -42,7 +32,7 @@ const Franchise: React.FC = () => {
                 Own the Future  <br/>of Fresh Juice Vending
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-lg leading-relaxed">
-                Start with one machine and scale to 50+. A high-margin, automated business model designed for passive income and scalability.
+                Start with one machine and scale to 50+. <p>A high-margin, automated business model designed for passive income and scalability.</p>
               </p>
               <Button onClick={() => document.getElementById('franchise-form')?.scrollIntoView({ behavior: 'smooth' })} variant="white" className="text-lg px-8 py-3">
                 Apply Now
@@ -132,8 +122,8 @@ const Franchise: React.FC = () => {
                 <div className="w-16 h-16 mx-auto bg-blue-50 group-hover:bg-blue-100 transition-colors rounded-full flex items-center justify-center mb-4 text-contrast">
                    <Timer className="w-8 h-8" />
                 </div>
-                <div className="font-bold text-2xl text-text">12-18 Mo</div>
-                <div className="text-base text-text-light">Payback Period</div>
+                <div className="font-bold text-2xl text-text">25+ yrs exp.</div>
+                <div className="text-base text-text-light">Strong Background</div>
              </div>
              <div className="text-center group">
                 <div className="w-16 h-16 mx-auto bg-green-50 group-hover:bg-green-100 transition-colors rounded-full flex items-center justify-center mb-4 text-secondary">
@@ -160,37 +150,55 @@ const Franchise: React.FC = () => {
         </motion.div>
       </Section>
 
-      {/* FAQ Section */}
+      {/* What's In It for the Franchise */}
       <Section>
-         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.6 }}
-           className="max-w-3xl mx-auto"
-         >
-            <div className="text-center mb-10">
-               <h2 className="font-display font-bold text-3xl">Frequently Asked Questions</h2>
-            </div>
-            <div className="space-y-4">
-               {faqs.map((item, i) => (
-                  <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                     <button 
-                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                        className="w-full flex items-center justify-between p-5 text-left font-medium text-lg hover:bg-gray-50 transition-colors"
-                     >
-                        <span>{item.q}</span>
-                        {openFaq === i ? <Minus className="text-primary w-5 h-5" /> : <Plus className="text-gray-400 w-5 h-5" />}
-                     </button>
-                     {openFaq === i && (
-                        <div className="p-5 pt-0 text-text-light text-base leading-relaxed border-t border-gray-50 bg-gray-50/50">
-                           {item.a}
-                        </div>
-                     )}
-                  </div>
-               ))}
-            </div>
-         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-display font-bold text-3xl text-text">What's In It for the Franchise</h2>
+          <p className="text-text-light mt-2 text-lg">Discover the benefits of partnering with Fruitlinq.</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            {
+              title: "Turnkey Solution",
+              description: "Fruitlinq provides, installs, and operationalizes the vending machine with automated refills",
+              color: "text-primary"
+            },
+            {
+              title: "Zero Staff Required",
+              description: "No barista training, no maintenance burden, automated cleaning performed",
+              color: "text-secondary"
+            },
+            {
+              title: "Real-Time Insights",
+              description: "Live stats and reports with funds deposited seamlessly into your account",
+              color: "text-vibrant-purple"
+            },
+            {
+              title: "Maximum Uptime",
+              description: "99.2% uptime with remote monitoring, dedicated support, and advanced telemetry",
+              color: "text-orange-600"
+            }
+          ].map((benefit, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 hover:border-gray-200 transition-colors text-center"
+            >
+              <h3 className={`font-bold text-xl mb-4 ${benefit.color}`}>{benefit.title}</h3>
+              <p className="text-text-light text-base leading-relaxed">{benefit.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </Section>
 
       {/* Form Section */}
