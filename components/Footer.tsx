@@ -50,8 +50,9 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-100 pt-8 text-center">
           <p className="text-sm text-white">
-            &copy; {new Date().getFullYear()} Fruitlinq Agro Private Limited. All rights reserved. Developed by Exelus Info Tech. Pvt.Ltd
+            &copy; {new Date().getFullYear()} Fruitlinq Agro Private Limited. All rights reserved. <a href="https://exelusinfotech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Developed by Exelus Info Tech. Pvt.Ltd</a>
           </p>
+
         </div>
       </div>
     </footer>
