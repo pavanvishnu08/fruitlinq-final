@@ -5,7 +5,7 @@ import { CONTACT_INFO, NAV_LINKS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-gray-100 pt-16 pb-8" style={{ backgroundImage: 'url(/banner-with-space-left.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat', color: 'white' }}>
+    <footer className="border-t border-gray-100 pt-16 pb-8 bg-cover bg-no-repeat text-white bg-[url('/FruitlingCupSwap.png')] bg-[right_top] md:bg-[center_top]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Info */}
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-100 pt-8 text-center">
           <p className="text-sm text-white">
-            &copy; {new Date().getFullYear()} Fruitlinq Agro Private Limited. All rights reserved. <a href="https://exelusinfotech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Developed by Exelus Info Tech. Pvt.Ltd</a>
+            &copy; {new Date().getFullYear()} Fruitlinq Agro Private Limited. All rights reserved.
           </p>
 
         </div>

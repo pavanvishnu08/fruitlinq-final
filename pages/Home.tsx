@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:aspect-video overflow-hidden" style={{ backgroundImage: 'url(/background-image.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:aspect-video overflow-hidden" style={{ backgroundImage: 'url(/home-page-final.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         {/* Dark Overlay for Text Readability */}
         <div className="absolute inset-0 bg-black/40"></div>
 
@@ -256,7 +256,7 @@ const Home: React.FC = () => {
           <div className="order-2 lg:order-1">
              <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4 mt-8">
-                   <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh Juice" className="rounded-2xl shadow-md w-full h-48 object-cover" />
+                   <img src="/home page img 1.jpeg" alt="Fresh Juice" className="rounded-2xl shadow-md w-full h-48 object-cover" />
                    <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-secondary">
                       <h4 className="font-bold text-lg mb-2 text-secondary">Hygiene First</h4>
                       <p className="text-base text-gray-600">Zero human touchpoints ensures maximum safety.</p>
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
                       <h4 className="font-bold text-lg mb-2">24/7 Available</h4>
                       <p className="text-base text-orange-50">Fresh juice anytime, day or night.</p>
                    </div>
-                   <img src="/Oranges.webp" alt="Oranges Supply" className="rounded-2xl shadow-md w-full h-48 object-cover" />
+                   <img src="/home page img 2.jpeg" alt="Oranges Supply" className="rounded-2xl shadow-md w-full h-48 object-cover" />
                 </div>
              </div>
           </div>

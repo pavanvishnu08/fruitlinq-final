@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f5f6fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        .competency-section {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .competency-block {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .competency-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+        }
+
+        .block-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .block-number {
+            background: var(--secondary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .competency-block h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .competency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .competency-item {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .competency-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .competency-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .competency-value {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .skill-progress {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .tool-item {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .tool-item:hover {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .language-item {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .language-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .language-level {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .self-assessment {
+            margin-top: 2rem;
+        }
+
+        .self-assessment h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .assessment-item {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .assessment-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .assessment-value {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .competency-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .block-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mes Compétences</h1>
+            <p>Développeur Web Full Stack</p>
+        </header>
+
+        <section class="competency-section">
+            <h2 class="section-title">Compétences Techniques</h2>
+            
+            <div class="competency-block">
+                <div class="block-header">
+                    <div class="block-number">01</div>
+                    <h3>Frontend</h3>
+                </div>
+                <div class="competency-grid">
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>TypeScript</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="competency-block">
+                <div class="block-header">
+                    <div class="block-number">02</div>
+                    <h3>Backend</h3>
+                </div>
+                <div class="competency-grid">
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Node.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 80%"></div>
+                        </div>
+                    <div>
+                    </div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>SQL</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="competency-block">
+                <div class="block-header">
+                    <div class="block-number">03</div>
+                    <h3>Outils & Technologies</h3>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-item">Git</div>
+                    <div class="tool-item">Docker</div>
+                    <div class="tool-item">AWS</div>
+                    <div class="tool-item">Figma</div>
+                    <div class="tool-item">VS Code</div>
+                    <div class="tool-item">Linux</div>
+                </div>
+            </div>
+
+            <div class="competency-block">
+                <div class="block-header">
+                    <div class="block-number">04</div>
+                    <h3>Langues</h3>
+                </div>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <div class="language-name">Français</div>
+                        <div class="language-level">Langue maternelle</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Anglais</div>
+                        <div class="language-level">Courant (C1)</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Espagnol</div>
+                        <div class="language-level">Intermédiaire (B2)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="competency-block self-assessment">
+                <div class="block-header">
+                    <div class="block-number">05</div>
+                    <h3>Auto-évaluation Globale</h3>
+                </div>
+                <div class="assessment-grid">
+                    <div class="assessment-item">
+                        <div class="assessment-label">Niveau actuel</div>
+                        <div class="assessment-value">Débutant</div>
+                    </div>
+                    <div class="assessment-item">
+                        <div class="assessment-label">Objectif à atteindre</div>
+                        <div class="assessment-value">Intermédiaire</div>
+                    </div>
+                    <div class="assessment-item">
+                        <div class="assessment-label">Points forts</div>
+                        <div class="assessment-value">Motivation, curiosité</div>
+                    </div>
+                    <div class="assessment-item">
+                        <div class="assessment-label">Points à améliorer</div>
+                        <div class="assessment-value">Techniques spécifiques</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Mon Portfolio. Tous droits réservés.</p>
+            <p><a href="index.html">Retour à l'accueil</a></p>
+        </footer>
+    </div>
+</body>
+</html>
